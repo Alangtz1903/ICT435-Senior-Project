@@ -4,6 +4,6 @@
     <p>NMSU ICT 435 Senior Project</p>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="<?php echo $base; ?>js/script.js"></script>
 </body>
 </html>
