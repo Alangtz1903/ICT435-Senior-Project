@@ -1,6 +1,134 @@
 
-/* IT Help Desk Ticket Form */
+/* ===================================
+   Small Business IT - Senior Project
+   Red, Black & White Theme
+   =================================== */
 
+/* General Website Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Website Header */
+
+header {
+    background-color: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Bar */
+
+nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #b22222;
+    color: white;
+}
+
+/* Main Website Content */
+
+main {
+    background-color: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 5px;
+    min-height: 400px;
+}
+
+h2 {
+    color: #8b0000;
+}
+
+h3 {
+    color: #a52a2a;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Homepage */
+
+.hero {
+    background-color: #fff0f0;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+/* Buttons */
+
+.btn,
+button {
+    display: inline-block;
+    background-color: #8b0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover,
+button:hover {
+    background-color: #b22222;
+    color: white;
+}
+
+/* IT Services */
+
+.service {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Forms */
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea,
 select {
     width: 100%;
     padding: 10px;
@@ -8,17 +136,27 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: Arial, sans-serif;
-    background-color: white;
 }
 
-select:focus,
 input:focus,
-textarea:focus {
-    outline: 2px solid #245889;
+textarea:focus,
+select:focus {
+    outline: 2px solid #b22222;
     outline-offset: 1px;
 }
 
-/* Ticket Status */
+button {
+    margin-top: 15px;
+}
+
+.message {
+    background-color: #fff0f0;
+    border-left: 4px solid #8b0000;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+/* Help Desk Tickets */
 
 .ticket {
     padding: 15px;
@@ -30,6 +168,8 @@ textarea:focus {
 .ticket h3 {
     margin-top: 0;
 }
+
+/* Ticket Status */
 
 .status {
     display: inline-block;
@@ -53,7 +193,7 @@ textarea:focus {
     color: #155724;
 }
 
-/* Ticket Tables */
+/* Ticket Table */
 
 .ticket-table {
     width: 100%;
@@ -69,14 +209,97 @@ textarea:focus {
 }
 
 .ticket-table th {
-    background-color: #17365d;
+    background-color: #8b0000;
     color: white;
 }
 
 .ticket-table tr:nth-child(even) {
-    background-color: #f4f4f4;
+    background-color: #f9f4f4;
 }
 
 .table-container {
     overflow-x: auto;
+}
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===================================
+   Ticket Submission Popup
+   =================================== */
+
+.ticket-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.ticket-popup {
+    background: white;
+    padding: 35px;
+    border-top: 6px solid #8b0000;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.ticket-popup h2 {
+    margin-top: 10px;
+    color: #8b0000;
+}
+
+.popup-check {
+    background-color: #d4edda;
+    color: #155724;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.ticket-popup .btn,
+.ticket-popup button {
+    margin: 8px 4px;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .ticket-popup {
+        padding: 25px 18px;
+    }
 }
